@@ -1,0 +1,123 @@
+@import url(font.css);
+.horizontal {
+    display: flex;
+    width: 100%;
+}
+.horizontal section {
+    min-width: 100%;
+    height: 100vh;
+    flex-shrink: 0;
+}
+.vertical section {
+    height: 100vh;
+}
+
+header {
+    background-color: #C1CDC4;
+    position: fixed;
+    width: 100%; 
+    height: 80px;
+    top: 120px;
+}
+main {
+    max-width: 1300px;
+    height: 100vh;
+    margin: 0 auto;
+}
+/* intro */
+section.intro div.left div.desc,
+section.intro div.right {
+    background-color: #f2f2f2;
+    padding: 20px 30px;
+}
+/* intro-left */
+section.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    position: relative;
+    padding: 0 50px;
+}
+section.intro div.left {
+    position: relative;
+    height: 100vh;
+    width: 500px;
+}
+section.intro div.left figure {
+    background-color: #D9D9D9;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    top: 60px;
+    background: url(../img/1.jpg) no-repeat top center/cover;
+    position: absolute;
+    z-index: 11;
+}
+section.intro div.left div.name {
+    position: absolute;
+    top: 300px;
+    width: 400px;
+    height: 400px;
+}
+section.intro div.left div.name div.namehighlight {
+    position: relative;
+    margin-bottom: 30px;
+}
+section.intro div.left div.name p.name {
+    font-family: 'HSSaemaul-Regular', "Pretendard Variable";
+    font-size: 48px;
+    color: #000;
+    position: relative;
+    z-index: 5;
+}
+section.intro div.left div.name span {
+    position: absolute;
+    background-color: #A3B1A7;
+    width: 500px; height: 30px;
+    left: -20px; bottom: 0;
+    z-index: 1;
+}
+section.intro div.left div.desc {
+    position: absolute;
+    bottom: 200px;
+    width: 400px;
+    height: auto;
+}
+
+/* intro-right */
+section.intro div.right {
+    height: 290px;
+    width: 450px;
+    position: relative;
+    bottom: 200px;
+}
+section.intro div.right div.rightleft,
+section.intro div.right div.rightright {
+    position: absolute;
+    height: inherit;
+}
+section.intro div.right div.rightleft {
+    left: 30px;
+}
+section.intro div.right div.rightright {
+    right: 60px;
+}
+section.intro div.right p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+section.intro div.right p > span {
+    color: #000;
+    font-weight: 600;
+    margin-right: 20px;
+}
+section.intro div.right ul {
+    margin-bottom: 10px;
+}
+section.intro div.right ul li {
+    line-height: 1.4;
+}
+section.intro div.rightleft div.down {
+    position: absolute;
+    bottom: 10px;
+}
