@@ -9,8 +9,7 @@ const timeline = gsap.timeline({
         end: "+=300%",
         snap: {
             snapTo: [0, 0.3, 1],
-            duration: 0.5,
-            ease: "power1.inOut"
+            duration: 0.2
         }
     }
 });
