@@ -4,16 +4,12 @@
     width: 100%;
 }
 .horizontal section {
-    min-width: 100%;
     height: 100vh;
     flex-shrink: 0;
 }
-.vertical section {
-    height: 100vh;
-}
 
 header {
-    background-color: #C1CDC4;
+    background-color: rgb(193, 205, 196);
     position: fixed;
     width: 100%; 
     height: 80px;
@@ -63,7 +59,7 @@ section.intro div.left div.name div.namehighlight {
     position: relative;
     margin-bottom: 30px;
 }
-section.intro div.left div.name p.name {
+section.intro div.left div.name h1.name {
     font-family: 'ELAND_Nice_M', "Pretendard Variable";
     font-size: 46px;
     color: #000;
@@ -110,6 +106,7 @@ section.intro div.right p > span {
     color: #000;
     font-weight: 600;
     margin-right: 20px;
+    font-size: 15px;
 }
 section.intro div.right ul {
     margin-bottom: 10px;
@@ -120,4 +117,82 @@ section.intro div.right ul li {
 section.intro div.rightleft div.down {
     position: absolute;
     bottom: 10px;
+}
+
+/* skills */
+section.skills {
+    position: relative;
+    width: 900px;
+}
+section.skills h2 {
+    font-family: 'ELAND_Nice_M', "Pretendard Variable";
+    font-size: 46px;
+    color: #fff;
+    position: absolute;
+    top: 138px; left: 0;
+    z-index: 5;
+}
+section.skills h3 {
+    font-family: 'ELAND_Nice_M', "Pretendard Variable";
+    color: #000;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+section.skills div.skills_area {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+    width: 900px;
+    position: absolute;
+    top: 250px; left: 50%;
+    transform: translateX(-50%);
+}
+section.skills div.skillbox {
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+section.skills div.skillbox:nth-child(n+3) {
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+section.skills div.quarter {
+    width: 45%;
+}
+section.skills div.half {
+    width: 100%;
+    justify-content: space-between;
+}
+section.skills div.img_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+section.skills div.img_area {
+    text-align: center;
+    position: relative;
+}
+section.skills img {
+    height: 60px;
+    margin: 10px;
+}
+section.skills div.img_area p.skill_name {
+    background-color: rgba(90, 118, 99, 0.75);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 15px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: .2s all;
+    color: #fff;
+}
+section.skills div.img_area:hover p.skill_name {
+    opacity: 1;
 }
