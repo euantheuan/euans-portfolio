@@ -33,6 +33,7 @@ section.intro {
     align-items: end;
     position: relative;
     padding: 0 50px;
+    margin-right: 300px;
 }
 section.intro div.left {
     position: relative;
@@ -120,7 +121,10 @@ section.intro div.rightleft div.down {
 }
 
 /* skills */
-section.skills {
+section.sklills {
+    padding-right: 1300px;
+}
+section.skills div.skills_container {
     position: relative;
     width: 900px;
 }
@@ -195,4 +199,22 @@ section.skills div.img_area p.skill_name {
 }
 section.skills div.img_area:hover p.skill_name {
     opacity: 1;
+}
+
+/* webdev */
+section.webdev {
+    position: relative;
+    width: 1300px;
+}
+section.webdev h2 {
+    font-family: 'ELAND_Nice_M', "Pretendard Variable";
+    font-size: 46px;
+    color: #ffffff;
+    position: absolute;
+    top: 138px; left: 0;
+    z-index: 5;
+}
+section.webdev div.webdev_container {
+    position: relative;
+    width: 900px;
 }

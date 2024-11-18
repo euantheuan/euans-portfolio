@@ -1,76 +1,50 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// Horizontal scrolling sections
-const horizontalScroll = () => {
-    const horizontalSections = gsap.utils.toArray(".horizontal section");
-    const horizontalWrapper = document.querySelector(".horizontal");
+// Create main timeline
+const timeline = gsap.timeline({
+    scrollTrigger: {
+        trigger: "main",
+        pin: true,
+        scrub: 1,
+        end: "+=300%",
+        snap: {
+            snapTo: [0, 0.26, 0.7, 1],
+            duration: 0.5,
+            ease: "power1.inOut"
+        }
+    }
+});
 
-    const horizontalTween = gsap.to(horizontalSections, {
+// Initial position setup
+gsap.set(".webdev", {
+    position: "fixed",
+    top: 0,
+    left: "2600px"
+});
+
+// Animation sequence
+const horizontalSections = gsap.utils.toArray(".horizontal section");
+timeline
+    // First horizontal scroll (intro and skills)
+    .to(horizontalSections, {
         xPercent: -100 * (horizontalSections.length - 1),
         ease: "none",
-        scrollTrigger: {
-            trigger: ".horizontal",
-            pin: true,
-            pinSpacing: true,
-            scrub: 1,
-            snap: {
-                snapTo: 1 / (horizontalSections.length - 1),
-                duration: 0.5,
-                ease: "power1.inOut"
-            },
-            end: () => `+=${horizontalWrapper.offsetWidth}`,
-            markers: true,
-            onLeaveBack: () => {
-                gsap.to(horizontalWrapper, {
-                    visibility: "visible",
-                    duration: 0
-                });
-            }
-        }
+        duration: 1
+    })
+    // Slide in webdev from right
+    .to(".webdev", {
+        left: "1000px",
+        ease: "none",
+        duration: 0.5
+    })
+    // Scroll webdev vertically
+    .to(".webdev", {
+        yPercent: 0,
+        ease: "none",
+        duration: 1
     });
 
-    // Create a trigger for hiding horizontal section
-    ScrollTrigger.create({
-        trigger: ".vertical",
-        start: "top bottom",
-        end: "top top",
-        onEnter: () => {
-            gsap.to(horizontalWrapper, {
-                visibility: "hidden",
-                duration: 0
-            });
-        },
-        onLeaveBack: () => {
-            gsap.to(horizontalWrapper, {
-                visibility: "visible",
-                duration: 0
-            });
-        },
-        markers: true
-    });
-};
-
-// Vertical scrolling sections
-const verticalScroll = () => {
-    const verticalSections = gsap.utils.toArray(".vertical section");
-
-    verticalSections.forEach((section, i) => {
-        ScrollTrigger.create({
-            trigger: section,
-            start: "top top",
-            pin: true,
-            pinSpacing: false,
-            snap: 1,
-            markers: true
-        });
-    });
-};
-
-// Initialize both scroll behaviors
-horizontalScroll();
-verticalScroll();
-
-// Refresh ScrollTrigger on window resize
+// Handle window resizing
 window.addEventListener("resize", () => {
     ScrollTrigger.refresh();
 });
