@@ -6,19 +6,12 @@ const timeline = gsap.timeline({
         trigger: "main",
         pin: true,
         scrub: 1,
-        end: "+=300%",
+        end: "+=400%",
         snap: {
-            snapTo: [0, 0.3, 1],
+            snapTo: [0, 0.25, 0.5, 0,6, 0.7],
             duration: 0.2
         }
     }
-});
-
-// Initial position setup
-gsap.set(".webdev", {
-    position: "fixed",
-    top: 0,
-    left: "2600px"
 });
 
 // Animation sequence
@@ -30,18 +23,14 @@ timeline
         ease: "none",
         duration: 1
     })
-    // Slide in webdev from right
-    .to(".webdev", {
-        left: "1000px",
-        ease: "none",
-        duration: 0.5
-    })
-    // Scroll webdev vertically
-    .to(".webdev", {
-        yPercent: 0,
-        ease: "none",
-        duration: 1
-    });
+
+const verticalSections = gsap.utils.toArray('div.vertical-contents div.webdev')
+timeline.to(verticalSections, {
+    yPercent: -100 * (verticalSections.length - 1),
+    ease: "none",
+    duration: 1
+});
+
 
 // Handle window resizing
 window.addEventListener("resize", () => {
