@@ -212,7 +212,6 @@ section.skills div.img_area:hover p.skill_name {
 /* webdev */
 section.webdev {
     width: 1000px;
-    margin: 0 auto;
     position: relative;
     left: 600px;
 }
@@ -248,7 +247,7 @@ section.webdev div.webdev {
     justify-content: space-between;
     align-items: start;
     flex-wrap: wrap;
-    margin-bottom: 100px;
+    box-sizing: border-box;
 }
 section.webdev div.webdev > span {
     width: 100px;

@@ -26,7 +26,7 @@ timeline
 
 const verticalSections = gsap.utils.toArray('div.vertical-contents div.webdev')
 timeline.to(verticalSections, {
-    yPercent: -100 * (verticalSections.length - 1),
+    yPercent: -100 * (verticalSections.length + 1),
     ease: "none",
     duration: 1
 });
