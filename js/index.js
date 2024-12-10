@@ -8,7 +8,7 @@ const timeline = gsap.timeline({
         scrub: 1,
         end: "+=400%",
         snap: {
-            snapTo: [0, 0.25, 0.5, 0,6, 0.7],
+            snapTo: [0, 0.25, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1],
             duration: 0.2
         }
     }

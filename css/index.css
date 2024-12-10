@@ -81,6 +81,10 @@ section.intro div.left div.name span {
     left: -20px; bottom: 0;
     z-index: 1;
 }
+section.intro div.left p.onesentence {
+    font-size: 18px;
+    color: #000
+}
 section.intro div.left div.desc {
     position: absolute;
     bottom: 10%;
@@ -212,6 +216,14 @@ section.webdev {
     position: relative;
     left: 600px;
 }
+span.timeline {
+    display: block;
+    width: 1px;
+    height: calc(100vh - 200px);
+    background-color: #000;
+    position: absolute;
+    left: 100px; bottom: 0;
+}
 .vertical-wrapper {
     height: 100vh;
     overflow: hidden;
@@ -222,10 +234,6 @@ section.webdev {
     position: absolute;
     width: 100%;
     transform: translateY(0);
-}
-.webdev {
-    width: 100%;
-    position: relative;
 }
 section.webdev h2 {
     font-family: 'ELAND_Nice_M', "Pretendard Variable";
@@ -240,17 +248,71 @@ section.webdev div.webdev {
     justify-content: space-between;
     align-items: start;
     flex-wrap: wrap;
-    margin-bottom: 70px;
+    margin-bottom: 100px;
 }
 section.webdev div.webdev > span {
     width: 100px;
+    position: relative;
+}
+section.webdev div.webdev > span::after {
+    content: '';
+    display: block;
+    width: 20px; height: 20px;
+    border-radius: 20px;
+    background-color: #A3B1A7;
+    position: absolute;
+    right: -10px; 
+    top: 50%; transform: translateY(-50%);
+    z-index: 20;
+}
+section.webdev div.webdev > span::before {
+    content: '';
+    display: block;
+    width: 10px; height: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    position: absolute;
+    right: -5px; 
+    top: 50%; transform: translateY(-50%);
+    z-index: 30;
 }
 section.webdev div.webdev > div.right {
     width: calc(100% - 200px);
 }
 section.webdev div.webdev div.right div.screenshots {
-    width: inherit
+    width: inherit;
+    margin-bottom: 25px;
 }
 section.webdev div.webdev div.right div.screenshots img {
     width: inherit
+}
+div.webdev div.desc > * {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-size: 18px;
+    word-break: keep-all;
+}
+div.webdev div.desc p.title {
+    display: inline-block;
+    font-family: 'ELAND_Nice_M', "Pretendard Variable";
+    font-size: 36px;
+    color:#2b4f36;
+    margin-right: 25px;
+}
+div.webdev div.desc span.clone,
+div.webdev div.desc span.available {
+    color: #fff;
+    font-size: 20px; font-weight: 500;
+    background-color: #A3B1A7;
+    padding: 4px 9px; border-radius: 4px;
+    margin-right: 10px;
+}
+div.webdev div.desc span.available {
+    border: 1px solid #000;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: #000
+}
+div.webdev div.desc p.clone > span {
+    margin-left: 20px;
 }
