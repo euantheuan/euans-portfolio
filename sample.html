@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .horizontal-scroll-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .horizontal-scroll-content {
+            display: flex;
+            position: absolute;
+            height: 100%;
+            will-change: transform;
+        }
+
+        .section {
+            min-width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        /* Spacer to create scrollable height */
+        .scroll-spacer {
+            height: 400vh; /* Match total width of content (4 sections × 100vw) */
+            width: 1px; /* Minimal width */
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Section colors */
+        .section:nth-child(1) { background: #2196F3; }
+        .section:nth-child(2) { background: #4CAF50; }
+        .section:nth-child(3) { background: #F44336; }
+        .section:nth-child(4) { background: #9C27B0; }
+
+        /* Progress bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: white;
+            z-index: 1000;
+        }
+
+        /* Instructions */
+        .instructions {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar"></div>
+    <div class="instructions">👆 Scroll Down to Move Horizontally</div>
+
+    <!-- Wrapper for horizontal scroll content -->
+    <div class="horizontal-scroll-wrapper">
+        <div class="horizontal-scroll-content">
+            <div class="section">Section 1</div>
+            <div class="section">Section 2</div>
+            <div class="section">Section 3</div>
+            <div class="section">Section 4</div>
+        </div>
+    </div>
+
+    <!-- Invisible spacer to enable vertical scrolling -->
+    <div class="scroll-spacer"></div>
+
+    <script>
+        const content = document.querySelector('.horizontal-scroll-content');
+        const progressBar = document.querySelector('.progress-bar');
+        
+        console.log(document.documentElement.scrollHeight);
+        console.log(window.innerHeight);
+        // Calculate the maximum scroll distance
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        // Update horizontal position on scroll
+        window.addEventListener('scroll', () => {
+            // Get current scroll position
+            const scrolled = window.pageYOffset;
+            
+            // Calculate horizontal translation based on scroll position
+            const percentageScrolled = scrolled / maxScroll;
+            const horizontalTranslation = percentageScrolled * (content.scrollWidth - window.innerWidth);
+            
+            // Apply smooth transform
+            content.style.transform = `translateX(-${horizontalTranslation}px)`;
+            
+            // Update progress bar
+            progressBar.style.width = `${percentageScrolled * 100}%`;
+        });
+
+        // Prevent horizontal scrolling
+        document.addEventListener('wheel', (e) => {
+            if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+    </script>
+</body>
+</html>

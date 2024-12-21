@@ -1,28 +1,55 @@
 @import url(font.css);
 #wrap {
-    position: relative;
-    overflow: hidden;
-}
-.horizontal {
-    display: flex;
-    width: 100%;
     height: 100vh;
-    transform: translateX(0);
 }
-.horizontal section {
-    height: 100vh;
-    flex-shrink: 0;
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: white;
+    z-index: 1000;
 }
-
 header {
-    background-color: rgb(193, 205, 196);
+    background-color: #c1cdc4;
     position: fixed;
     width: 100%; 
     height: 80px;
     top: 120px;
 }
-main {
-    margin: 0 auto;
+div.horizontal_wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+div.horizontal_wrapper > div.horizontal_content {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    will-change: transform;
+}
+section {
+    min-width: 95vw;
+    height: 100vh;
+}
+.scroll-spacer {
+    height: 400vh; /* Match total width of content (4 sections × 100vw) */
+    width: 1px; /* Minimal width */
+    opacity: 0;
+    pointer-events: none;
+}
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: rgb(57, 110, 88);
+    z-index: 1000;
 }
 
 /* intro */
@@ -38,9 +65,7 @@ section.intro {
     justify-content: space-between;
     align-items: end;
     position: relative;
-    padding: 0 50px;
-    width: 100%;
-    margin-right: 200px;
+    padding: 0 150px;
 }
 section.intro div.left {
     position: relative;
@@ -90,6 +115,7 @@ section.intro div.left div.desc {
     bottom: 10%;
     width: 400px;
     height: auto;
+    margin-left: -20px;
 }
 
 /* intro-right */
@@ -132,6 +158,11 @@ section.intro div.rightleft div.down {
 }
 
 /* skills */
+section.skills {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
 section.skills div.skills_container {
     position: relative;
     width: 900px;
@@ -211,9 +242,14 @@ section.skills div.img_area:hover p.skill_name {
 
 /* webdev */
 section.webdev {
-    width: 1000px;
     position: relative;
-    left: 600px;
+    left: 200px;
+    height: 100%;
+    overflow: hidden;
+}
+section.webdev div.webdev_content {
+    width: 1000px;
+    height: 100%;
 }
 span.timeline {
     display: block;
@@ -230,9 +266,9 @@ span.timeline {
     top: 250px;
 }
 .vertical-contents {
-    position: absolute;
-    width: 100%;
-    transform: translateY(0);
+    height: 100%;
+    overflow: scroll;
+    padding-bottom: 500px;
 }
 section.webdev h2 {
     font-family: 'ELAND_Nice_M', "Pretendard Variable";
@@ -248,6 +284,7 @@ section.webdev div.webdev {
     align-items: start;
     flex-wrap: wrap;
     box-sizing: border-box;
+    margin-bottom: 100px;
 }
 section.webdev div.webdev > span {
     width: 100px;
@@ -314,4 +351,19 @@ div.webdev div.desc span.available {
 }
 div.webdev div.desc p.clone > span {
     margin-left: 20px;
+}
+
+/* webdesg */
+section.webdesg {
+    position: relative;
+    height: 100%;
+    left: 200px;
+}
+section.webdesg h2 {
+    font-family: 'ELAND_Nice_M', "Pretendard Variable";
+    font-size: 46px;
+    color: #fff;
+    position: absolute;
+    top: 138px; left: 0;
+    z-index: 5;
 }

@@ -1,38 +1,29 @@
-gsap.registerPlugin(ScrollTrigger);
+const content = document.querySelector('.horizontal_wrapper > .horizontal_content');
+const progressBar = document.querySelector('.progress-bar');
 
-// Create main timeline
-const timeline = gsap.timeline({
-    scrollTrigger: {
-        trigger: "main",
-        pin: true,
-        scrub: 1,
-        end: "+=400%",
-        snap: {
-            snapTo: [0, 0.25, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1],
-            duration: 0.2
-        }
+// Calculate the maximum scroll distance
+const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+
+// Update horizontal position on scroll
+window.addEventListener('scroll', () => {
+    // Get current scroll position
+    const scrolled = window.pageYOffset;
+
+    // Calculate horizontal translation based on scroll position
+    const percentageScrolled = scrolled / maxScroll;
+    const horizontalTranslation = percentageScrolled * (content.scrollWidth - window.innerWidth);
+
+    // Apply smooth transform
+    content.style.transform = `translateX(-${horizontalTranslation}px)`;
+
+    // Update progress bar
+    progressBar.style.width = `${percentageScrolled * 100}%`; 
+});
+
+// Prevent horizontal scrolling
+document.addEventListener('wheel', (e) => {
+    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+        e.preventDefault();
     }
-});
-
-// Animation sequence
-const horizontalSections = gsap.utils.toArray(".horizontal section");
-timeline
-    // First horizontal scroll (intro and skills)
-    .to(horizontalSections, {
-        xPercent: -100 * (horizontalSections.length - 1),
-        ease: "none",
-        duration: 1
-    })
-
-const verticalSections = gsap.utils.toArray('div.vertical-contents div.webdev')
-timeline.to(verticalSections, {
-    yPercent: -100 * (verticalSections.length + 1),
-    ease: "none",
-    duration: 1
-});
-
-
-// Handle window resizing
-window.addEventListener("resize", () => {
-    ScrollTrigger.refresh();
-});
+}, { passive: false });
