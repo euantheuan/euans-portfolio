@@ -12,7 +12,7 @@
     z-index: 1000;
 }
 header {
-    background-color: #b5cde7;
+    background-color: #80a8d2;
     position: fixed;
     width: 100%; 
     height: 80px;
@@ -128,7 +128,7 @@ section.intro div.left div.name h1.name {
 }
 section.intro div.left div.name span {
     position: absolute;
-    background-color: #80a8d2;
+    background-color: #b5cde7;
     width: 500px; height: 30px;
     left: -20px; bottom: 0;
     z-index: 1;
