@@ -81,7 +81,7 @@ section.intro > div.top {
     font-size: 22px;
     font-weight: 600;
     color: #fff;
-    background-color: #A3B1A7;
+    background-color: #47644f;
     padding: 10px 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -105,7 +105,7 @@ section.intro div.left figure {
     height: 200px;
     border-radius: 200px;
     top: 60px;
-    background: url(../img/1.png) no-repeat top -50px left 0/100%;
+    background: url(../img/1.png) no-repeat top -30px left 0/100%;
     position: absolute;
     z-index: 1000;
 }
