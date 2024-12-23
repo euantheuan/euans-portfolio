@@ -85,7 +85,7 @@ section.intro > div.top {
     font-size: 22px;
     font-weight: 600;
     color: #fff;
-    background-color: #80a8d2;
+    background-color: #2f557d;
     padding: 10px 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -249,7 +249,7 @@ section.skills img {
     margin: 10px;
 }
 section.skills div.img_area p.skill_name {
-    background-color: rgba(90, 118, 99, 0.9);
+    background-color: rgba(40, 91, 145, 0.9);
     position: absolute;
     top: 50%;
     left: 50%;
