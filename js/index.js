@@ -4,6 +4,11 @@ const progressBar = document.querySelector('.progress-bar');
 // Calculate the maximum scroll distance
 const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
 
+window.addEventListener('load', () => {
+    setInterval(() => {
+        document.querySelector('section.intro > div.top').style.opacity = '0'; 
+    }, 2000);
+})
 
 // Update horizontal position on scroll
 window.addEventListener('scroll', () => {

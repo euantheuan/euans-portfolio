@@ -33,8 +33,10 @@ div.horizontal_wrapper > div.horizontal_content {
     will-change: transform;
 }
 section {
-    min-width: 95vw;
-    height: 100vh;
+    min-width: 1300px;
+    width: 100vw;
+    min-height: 900px;
+    height: 95vh;
 }
 .scroll-spacer {
     height: 400vh; /* Match total width of content (4 sections × 100vw) */
@@ -44,12 +46,22 @@ section {
 }
 .progress-bar {
     position: fixed;
-    top: 0;
+    top: 115px;
     left: 0;
     width: 0%;
-    height: 4px;
+    height: 5px;
     background: rgb(57, 110, 88);
-    z-index: 1000;
+    z-index: 100;
+}
+section h2 {
+    font-family: 'ELAND_Nice_M', "Pretendard Variable";
+    font-size: 46px;
+    color: #fff;
+    position: absolute;
+    top: 128px; left: 0px;
+    z-index: 5;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 10px;
 }
 
 /* intro */
@@ -60,6 +72,20 @@ section.intro div.right {
 }
 
 /* intro-left */
+section.intro > div.top {
+    position: absolute;
+    top: 40px; left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #A3B1A7;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: .2s all;
+}
 section.intro {
     display: flex;
     justify-content: space-between;
@@ -69,7 +95,7 @@ section.intro {
 }
 section.intro div.left {
     position: relative;
-    height: 100vh;
+    height: 100%;
     width: 500px;
 }
 section.intro div.left figure {
@@ -80,11 +106,11 @@ section.intro div.left figure {
     top: 60px;
     background: url(../img/1.jpg) no-repeat top center/cover;
     position: absolute;
-    z-index: 11;
+    z-index: 1000;
 }
 section.intro div.left div.name {
     position: absolute;
-    top: 300px;
+    top: 300px; left: 0;
     width: 400px;
     height: 400px;
 }
@@ -167,14 +193,6 @@ section.skills div.skills_container {
     position: relative;
     width: 900px;
 }
-section.skills h2 {
-    font-family: 'ELAND_Nice_M', "Pretendard Variable";
-    font-size: 46px;
-    color: #fff;
-    position: absolute;
-    top: 138px; left: 0;
-    z-index: 5;
-}
 section.skills h3 {
     font-family: 'ELAND_Nice_M', "Pretendard Variable";
     color: #000;
@@ -225,7 +243,7 @@ section.skills img {
     margin: 10px;
 }
 section.skills div.img_area p.skill_name {
-    background-color: rgba(90, 118, 99, 0.75);
+    background-color: rgba(90, 118, 99, 0.9);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -269,14 +287,6 @@ span.timeline {
     height: 100%;
     overflow: scroll;
     padding-bottom: 500px;
-}
-section.webdev h2 {
-    font-family: 'ELAND_Nice_M', "Pretendard Variable";
-    font-size: 46px;
-    color: #ffffff;
-    position: absolute;
-    top: 138px; left: 0;
-    z-index: 11;
 }
 section.webdev div.webdev {
     display: flex;
@@ -358,12 +368,4 @@ section.webdesg {
     position: relative;
     height: 100%;
     left: 200px;
-}
-section.webdesg h2 {
-    font-family: 'ELAND_Nice_M', "Pretendard Variable";
-    font-size: 46px;
-    color: #fff;
-    position: absolute;
-    top: 138px; left: 0;
-    z-index: 5;
 }
