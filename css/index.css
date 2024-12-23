@@ -59,10 +59,10 @@ section h2 {
     font-size: 46px;
     color: #fff;
     position: absolute;
-    top: 128px; left: -30px;
+    top: 128px; left: -20px;
     z-index: 5;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    padding: 10px 30px;
+    padding: 10px;
 }
 
 /* intro */
@@ -134,7 +134,7 @@ section.intro div.left div.name span {
     z-index: 1;
 }
 section.intro div.left p.onesentence {
-    font-size: 18px;
+    font-size: 20px;
     color: #000
 }
 section.intro div.left div.desc {
@@ -143,6 +143,7 @@ section.intro div.left div.desc {
     width: 400px;
     height: auto;
     margin-left: -20px;
+    line-height: 1.6;
 }
 
 /* intro-right */
@@ -264,7 +265,6 @@ section.webdev {
     position: relative;
     left: 200px;
     height: 100%;
-    overflow: hidden;
 }
 section.webdev div.webdev_content {
     width: 1000px;
