@@ -285,9 +285,8 @@ span.timeline {
     top: 250px;
 }
 .vertical-contents {
-    height: 100%;
+    height: calc(100vh - 200px);
     overflow: scroll;
-    padding-bottom: 500px;
 }
 section.webdev div.webdev {
     display: flex;
@@ -341,13 +340,17 @@ div.webdev p.desc {
     font-size: 18px;
     word-break: keep-all;
 }
+div.webdev div.desc {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 15px;
+}
 div.webdev div.desc p.title {
-    display: inline-block;
     font-family: 'ELAND_Nice_M', "Pretendard Variable";
     font-size: 36px;
     color:#4e7aa8;
     margin-right: 25px;
-    margin-bottom: 15px;
 }
 div.webdev div.desc span.clone,
 div.webdev div.desc span.available {
