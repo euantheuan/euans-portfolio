@@ -230,6 +230,12 @@ section.skills div.skillbox:nth-child(n+3) {
 section.skills div.quarter {
     width: 45%;
 }
+section.skills div.quarter > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:nowrap;
+}
 section.skills div.half {
     width: 100%;
     justify-content: space-between;
