@@ -334,9 +334,28 @@ section.webdev div.webdev div.right div.screenshots img {
     width: inherit;
     margin-bottom: 30px;
 }
+section.webdev div.webdev div.right div.screenshots div.goto {
+    margin: 0 auto;
+    text-align: center;
+}
+section.webdev div.webdev div.right div.screenshots a {
+    border: 1px solid #000;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: #000;
+    font-size: 18px;
+    padding: 8px 15px; border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: .2s all;
+}
+section.webdev div.webdev div.right div.screenshots a:hover {
+    background-color: #80a8d293;
+    color: #fff;
+}
 div.webdev p.desc {
     line-height: 1.6;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     font-size: 18px;
     word-break: keep-all;
 }
