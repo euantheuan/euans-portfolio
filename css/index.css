@@ -40,8 +40,8 @@ section {
     height: 95vh;
 }
 .scroll-spacer {
-    height: 400vh; /* Match total width of content (4 sections × 100vw) */
-    width: 1px; /* Minimal width */
+    height: 400vh;
+    width: 1px;
     opacity: 0;
     pointer-events: none;
 }
@@ -105,7 +105,7 @@ section.intro div.left figure {
     height: 200px;
     border-radius: 200px;
     top: 60px;
-    background: url(../img/1.jpg) no-repeat top center/cover;
+    background: url(../img/1.png) no-repeat top -50px left 0/100%;
     position: absolute;
     z-index: 1000;
 }
