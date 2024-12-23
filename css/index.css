@@ -12,7 +12,7 @@
     z-index: 1000;
 }
 header {
-    background-color: #c1cdc4;
+    background-color: #b5cde7;
     position: fixed;
     width: 100%; 
     height: 80px;
@@ -51,7 +51,7 @@ section {
     left: 0;
     width: 0%;
     height: 5px;
-    background: rgb(57, 110, 88);
+    background: #4e7aa8;
     z-index: 100;
 }
 section h2 {
@@ -68,7 +68,7 @@ section h2 {
 /* intro */
 section.intro div.left div.desc,
 section.intro div.right {
-    background-color: #f2f2f2;
+    background-color: #eff3f6;
     padding: 20px 30px;
 }
 
@@ -81,7 +81,7 @@ section.intro > div.top {
     font-size: 22px;
     font-weight: 600;
     color: #fff;
-    background-color: #47644f;
+    background-color: #80a8d2;
     padding: 10px 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -100,7 +100,7 @@ section.intro div.left {
     width: 500px;
 }
 section.intro div.left figure {
-    background-color: #D9D9D9;
+    background-color: #333;
     width: 200px;
     height: 200px;
     border-radius: 200px;
@@ -128,7 +128,7 @@ section.intro div.left div.name h1.name {
 }
 section.intro div.left div.name span {
     position: absolute;
-    background-color: #A3B1A7;
+    background-color: #80a8d2;
     width: 500px; height: 30px;
     left: -20px; bottom: 0;
     z-index: 1;
@@ -306,7 +306,7 @@ section.webdev div.webdev > span::after {
     display: block;
     width: 20px; height: 20px;
     border-radius: 20px;
-    background-color: #A3B1A7;
+    background-color: #80a8d2;
     position: absolute;
     right: -10px; 
     top: 50%; transform: translateY(-50%);
@@ -343,14 +343,14 @@ div.webdev div.desc p.title {
     display: inline-block;
     font-family: 'ELAND_Nice_M', "Pretendard Variable";
     font-size: 36px;
-    color:#2b4f36;
+    color:#4e7aa8;
     margin-right: 25px;
 }
 div.webdev div.desc span.clone,
 div.webdev div.desc span.available {
     color: #fff;
     font-size: 20px; font-weight: 500;
-    background-color: #A3B1A7;
+    background-color: #80a8d2;
     padding: 4px 9px; border-radius: 4px;
     margin-right: 10px;
 }
