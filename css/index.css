@@ -300,6 +300,7 @@ section.webdev div.webdev {
 section.webdev div.webdev > span {
     width: 100px;
     position: relative;
+    top: 10px;
 }
 section.webdev div.webdev > span::after {
     content: '';
@@ -331,9 +332,10 @@ section.webdev div.webdev div.right div.screenshots {
     margin-bottom: 25px;
 }
 section.webdev div.webdev div.right div.screenshots img {
-    width: inherit
+    width: inherit;
+    margin-bottom: 30px;
 }
-div.webdev div.desc > * {
+div.webdev p.desc {
     line-height: 1.6;
     margin-bottom: 10px;
     font-size: 18px;
@@ -345,6 +347,7 @@ div.webdev div.desc p.title {
     font-size: 36px;
     color:#4e7aa8;
     margin-right: 25px;
+    margin-bottom: 15px;
 }
 div.webdev div.desc span.clone,
 div.webdev div.desc span.available {
