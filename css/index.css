@@ -296,11 +296,14 @@ span.timeline {
     position: relative;
     top: 250px;
 }
-.vertical-contents {
-    height: calc(100vh - 200px);
+section.webdev .vertical-contents {
+    height: calc(100vh - 180px);
     overflow: scroll;
+    position: relative;
 }
 section.webdev div.icondesc {
+    position: absolute;
+    right: 50px;
     margin-left: 150px;
     margin-bottom: 50px;
     background-color: #f2f2f2;
