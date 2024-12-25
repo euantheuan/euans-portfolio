@@ -3,9 +3,11 @@
     height: 100vh;
 }
 .primary {
-    fill: #80b1e4; }
+    fill: #80b1e4; 
+}
 .secondary {
-    fill: #164969; }
+    fill: #164969; 
+}
 .progress-bar {
     position: fixed;
     top: 0;
@@ -283,7 +285,7 @@ section.webdev div.webdev_content {
 span.timeline {
     display: block;
     width: 1px;
-    height: calc(100vh - 200px);
+    height: calc(100% - 200px);
     background-color: #000;
     position: absolute;
     left: 100px; bottom: 0;
@@ -298,9 +300,32 @@ span.timeline {
     height: calc(100vh - 200px);
     overflow: scroll;
 }
+section.webdev div.icondesc {
+    margin-left: 150px;
+    margin-bottom: 50px;
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 170px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+}
+section.webdev div.icondesc > div {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+section.webdev div.icondesc > div+div {
+    margin-top: 10px;
+}
+section.webdev div.icondesc svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
 section.webdev div.webdev {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: start;
     flex-wrap: wrap;
     box-sizing: border-box;
@@ -335,6 +360,7 @@ section.webdev div.webdev > span::before {
 }
 section.webdev div.webdev > div.right {
     width: calc(100% - 200px);
+    margin-left: 50px;
 }
 section.webdev div.webdev div.right div.screenshots {
     width: inherit;
