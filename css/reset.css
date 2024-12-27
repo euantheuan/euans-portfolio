@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-html,body,h1,h2,h3,h4,h5,h6,p,div,ul,ol,li,dt,dd,blockquote,address,header,nav,section,article,aside,main,footer,figure,figcaption,table,caption,thead,th,tr,td,tbody,tfoot,form,legend,fieldset {margin:0; padding:0;}
+html,body,h1,h2,h3,h4,h5,h6,p,div,ul,ol,li,dt,dd,blockquote,address,header,nav,section,article,aside,main,footer,figure,figcaption,table,caption,thead,th,tr,td,tbody,tfoot,form,legend,fieldset {margin:0; padding:0; word-break: keep-all;}
 
 ul li {list-style-type: none;}
 
