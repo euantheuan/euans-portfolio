@@ -76,6 +76,7 @@ section.intro div.left div.desc,
 section.intro div.right {
     background-color: #eff3f6;
     padding: 20px 30px;
+    border-radius: 2px;
 }
 
 /* intro-left */
@@ -138,6 +139,7 @@ section.intro div.left div.name span {
     width: 500px; height: 30px;
     left: -20px; bottom: 0;
     z-index: 1;
+    border-radius: 2px;
 }
 section.intro div.left p.onesentence {
     font-size: 20px;
