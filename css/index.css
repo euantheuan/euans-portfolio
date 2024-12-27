@@ -98,7 +98,7 @@ section.intro {
     justify-content: space-between;
     align-items: end;
     position: relative;
-    padding: 0 150px;
+    padding-left: 150px;
 }
 section.intro div.left {
     position: relative;
