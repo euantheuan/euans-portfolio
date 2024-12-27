@@ -32,3 +32,19 @@ document.addEventListener('wheel', (e) => {
         e.preventDefault();
     }
 }, { passive: false });
+
+
+// 모달 클릭 이벤트
+const modals = document.querySelectorAll('section.webdesg div.modal');
+const figures = document.querySelectorAll('section.webdesg div.webdesg figure');
+
+figures.forEach((figure, i) => {
+    figure.addEventListener('click', () => {
+        modals[i].style.display = 'flex';
+    });
+});
+modals.forEach((modal, i) => {
+    modal.addEventListener('click', () => {
+        modals[i].style.display = 'none';
+    });
+});
