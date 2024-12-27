@@ -456,11 +456,11 @@ section.webdesg div.webdesg_area div.webdesg figure {
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-section.webdesg div.webdesg_area div.webdesg figure.portrait {
+section.webdesg div.webdesg_area div.webdesg.portrait figure {
     width: 300px;
 }
-section.webdesg div.webdesg_area div.webdesg figure.landscape {
-    height: 650px;
+section.webdesg div.webdesg_area div.webdesg.landscape figure {
+    width: 1290px;
 }
 section.webdesg div.webdesg_area div.webdesg figure img {
     width: 100%;
@@ -470,7 +470,6 @@ section.webdesg div.modal {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    width: 270px; height: 400px;
     background-color: #4e7aa8;
     justify-content: center;
     align-items: center;
@@ -480,6 +479,14 @@ section.webdesg div.modal {
     border-radius: 10px;
     color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+section.webdesg div.webdesg_area div.webdesg.landscape div.modal {
+    width: 800px;
+    height: 300px;
+}
+section.webdesg div.webdesg_area div.webdesg.portrait div.modal {
+    width: 270px;
+    height: 400px;
 }
 section.webdesg div.webdesg_area div.webdesg:last-child figure {
     margin-bottom: 300px;
