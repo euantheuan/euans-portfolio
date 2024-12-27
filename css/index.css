@@ -451,11 +451,16 @@ section.webdesg div.webdesg_area div.webdesg {
     position: relative;
 }
 section.webdesg div.webdesg_area div.webdesg figure {
-    width: 300px;
     margin: 15px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+section.webdesg div.webdesg_area div.webdesg figure.portrait {
+    width: 300px;
+}
+section.webdesg div.webdesg_area div.webdesg figure.landscape {
+    height: 650px;
 }
 section.webdesg div.webdesg_area div.webdesg figure img {
     width: 100%;
