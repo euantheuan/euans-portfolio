@@ -507,11 +507,12 @@ section.webdesg div.modal p.desc {
 }
 section.webdesg div.modal a {
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 500;
     margin-left: 10px;
     width: 55px;
     text-align: center;
     padding: 4px;
-    border: 1px solid #fff;
+    background-color: #fff;
+    color: #4e7aa8;
     border-radius: 4px;
 }
