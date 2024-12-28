@@ -36,15 +36,15 @@ document.addEventListener('wheel', (e) => {
 
 // 모달 클릭 이벤트
 const modals = document.querySelectorAll('section.webdesg div.modal');
-const figures = document.querySelectorAll('section.webdesg div.webdesg figure');
+const figures = document.querySelectorAll('section.webdesg div.webdesg');
 
 figures.forEach((figure, i) => {
-    figure.addEventListener('click', () => {
-        modals[i].style.display = 'flex';
+    figure.addEventListener('mouseenter', () => {
+        modals[i].style.opacity = '1';
     });
 });
-modals.forEach((modal, i) => {
-    modal.addEventListener('click', () => {
-        modals[i].style.display = 'none';
+figures.forEach((figure, i) => {
+    figure.addEventListener('mouseleave', () => {
+        modals[i].style.opacity = '0';
     });
 });
