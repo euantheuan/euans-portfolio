@@ -368,12 +368,15 @@ section.webdev div.webdev > div.right {
     margin-left: 50px;
 }
 section.webdev div.webdev div.right div.screenshots {
-    width: inherit;
+    width: 570px;
     margin-bottom: 25px;
 }
 section.webdev div.webdev div.right div.screenshots img {
     width: inherit;
     margin-bottom: 30px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 section.webdev div.webdev div.right div.screenshots div.goto {
     margin: 0 auto;
