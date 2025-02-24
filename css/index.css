@@ -149,7 +149,7 @@ section.intro div.left div.desc {
     position: absolute;
     bottom: 10%;
     width: 400px;
-    height: auto;
+    height: 300px;
     margin-left: -20px;
     line-height: 1.6;
 }
