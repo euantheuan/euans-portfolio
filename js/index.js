@@ -13,7 +13,7 @@ window.addEventListener('load', () => {
 // Update horizontal position on scroll
 window.addEventListener('scroll', () => {
     // Get current scroll position
-    const scrolled = window.pageYOffset;
+    const scrolled = window.scrollY;
 
     // Calculate horizontal translation based on scroll position
     const percentageScrolled = scrolled / maxScroll;
